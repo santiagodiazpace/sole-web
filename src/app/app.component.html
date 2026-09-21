@@ -1,7 +1,6 @@
 <header class="site-header">
   <a class="brand" href="#inicio" aria-label="Ir al inicio">
-    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3 31 10.5v15L18 33 5 25.5v-15L18 3Z"/><path d="m12.5 17 3.7 3.8 7.6-8"/></svg></span>
-    <span><strong>miel.</strong><small>consultoría apícola</small></span>
+    <img class="brand-logo" src="assets/logos/sv-logo.png" alt="Soledad Varela — Consultoría apícola">
   </a>
   <nav aria-label="Navegación principal">
     <a href="#inicio" (click)="setActiveSection('inicio')" [class.active]="activeSection === 'inicio'">Inicio</a><a href="#sobre-nosotros" (click)="setActiveSection('sobre-mi')" [class.active]="activeSection === 'sobre-mi'">Sobre mí</a><a href="#servicios" (click)="setActiveSection('servicios')" [class.active]="activeSection === 'servicios'">Servicios</a><a href="#proyectos" (click)="setActiveSection('proyectos')" [class.active]="activeSection === 'proyectos'">Proyectos</a><a href="#innovacion" (click)="setActiveSection('innovacion')" [class.active]="activeSection === 'innovacion'">Innovación</a><a href="#capacitaciones" (click)="setActiveSection('capacitaciones')" [class.active]="activeSection === 'capacitaciones'">Capacitaciones</a><a href="#contacto" (click)="setActiveSection('contacto')" [class.active]="activeSection === 'contacto'">Contacto</a>
@@ -14,7 +13,7 @@
       <p class="eyebrow"><span></span> Ciencia aplicada al sector apícola</p>
       <h1>Conocimiento científico <span class="hero-highlight">para transformar la producción apícola.</span></h1>
       <p class="hero-text">Mejoramos la calidad, diferenciación y valor de mieles y productos apícolas con soluciones basadas en investigación, experiencia y una mirada sustentable.</p>
-      <div class="hero-actions"><a class="button button-primary" href="#servicios">Conocé mis servicios <span>→</span></a><a class="text-link" href="#contacto">Solicitar asesoramiento <span>↘</span></a></div>
+      <div class="hero-actions"><a class="button button-primary" href="#servicios">Conocé mis servicios <span>→</span></a><a class="button button-primary" href="#contacto">Solicitar asesoramiento <span>→</span></a></div>
       <div class="hero-facts" aria-label="Datos destacados"><div><strong>+15</strong><span>años de experiencia</span></div><div><strong>360°</strong><span>del análisis al mercado</span></div></div>
     </div>
   </section>
@@ -79,7 +78,7 @@
   </section>
 
   <section class="projects section" id="proyectos">
-    <div class="section-heading split"><div><p class="eyebrow"><span></span> Proyectos y experiencia</p><h2>Ideas que se convierten en <em>soluciones.</em></h2></div><p>Experiencias que articulan ciencia, territorio e innovación para generar impacto real.</p></div>
+    <div class="section-heading split"><div><p class="eyebrow"><span></span> Proyectos y experiencia</p><h2>Ideas que se convierten en <em>soluciones.</em></h2></div></div>
     <div class="project-grid">
       <article class="featured"><div><p class="tag">Calidad territorial</p><h3>Sello de calidad para mieles de Tandil</h3><p>Caracterización y construcción de criterios para reconocer el valor y la identidad de las mieles locales.</p></div></article>
       <article><p class="tag">Origen</p><h3>Diferenciación por origen botánico</h3></article>
@@ -109,19 +108,29 @@
   <section class="contact section" id="contacto">
     <div class="contact-copy">
       <p class="eyebrow light"><span></span> Contacto</p><h2>Contame qué necesitás mejorar en tu <em>producción o producto.</em></h2><p>Conversemos sobre tus desafíos y encontremos una forma concreta de avanzar.</p>
-      <div class="contact-links"><a href="mailto:hola@mielconsultoria.com">hola&#64;mielconsultoria.com <span>↗</span></a><a href="https://wa.me/?text=Hola%2C%20quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener">WhatsApp <span>↗</span></a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a></div>
-      <p class="location">⌖ Tandil, Buenos Aires, Argentina</p>
     </div>
-    <form class="contact-form" action="mailto:hola@mielconsultoria.com" method="post" enctype="text/plain">
-      <div class="field-row"><label>Nombre<input type="text" name="nombre" placeholder="¿Cómo te llamás?" required></label><label>Email<input type="email" name="email" placeholder="nombre@ejemplo.com" required></label></div>
-      <label>¿En qué podemos ayudarte?<select name="consulta"><option>Seleccioná una opción</option><option>Calidad y caracterización</option><option>Desarrollo de producto</option><option>Exportación y sellos</option><option>Capacitación</option><option>Otro</option></select></label>
-      <label>Mensaje<textarea name="mensaje" rows="4" placeholder="Contanos brevemente sobre tu proyecto..." required></textarea></label>
-      <button class="button button-gold" type="submit">Enviar consulta <span>→</span></button>
-    </form>
+    <div class="contact-details" aria-label="Datos de contacto">
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/></svg></span>
+        <span><small>Correo electrónico</small><strong>msolevarela&#64;gmail.com</strong></span>
+      </div>
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true"><img src="assets/logos/wa.png" alt=""></span>
+        <span><small>WhatsApp</small><strong>+54 9 2494 56-2066</strong></span>
+      </div>
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true"><img src="assets/logos/linkedin.png" alt=""></span>
+        <span><small>LinkedIn</small><a class="contact-profile-link" href="https://www.linkedin.com/in/maria-soledad-varela/" target="_blank" rel="noopener noreferrer">María Soledad Varela</a></span>
+      </div>
+      <div class="contact-card">
+        <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <span><small>Ubicación</small><strong>Tandil, Buenos Aires</strong></span>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer>
-  <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3 31 10.5v15L18 33 5 25.5v-15L18 3Z"/><path d="m12.5 17 3.7 3.8 7.6-8"/></svg></span><span><strong>miel.</strong><small>consultoría apícola</small></span></a>
-  <p>© 2026 Miel Consultoría · Tandil</p><a href="#inicio">Volver arriba ↑</a>
+  <a class="brand footer-brand" href="#inicio"><img class="footer-logo" src="assets/logos/sv-logo-blanco.png" alt="Soledad Varela — Consultoría apícola"></a>
+  <p>© 2026 SV Consultora Apícola · Tandil · Bs. As.</p><a href="#inicio">Volver arriba ↑</a>
 </footer>

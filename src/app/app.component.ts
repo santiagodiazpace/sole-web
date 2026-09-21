@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  activeSection = 'inicio';
+  public activeSection: string = 'inicio';
 
-  setActiveSection(section: string): void {
+  public setActiveSection(section: string): void {
     this.activeSection = section;
   }
 }
